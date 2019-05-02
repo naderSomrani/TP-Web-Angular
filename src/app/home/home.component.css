@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+  }
+  
+  button {
+    margin: 16px 8px;
+  }
+
+img {
+    max-width: 30px;
+}
+
+.main-content{
+  padding: 60px; 
+  padding-bottom: 260px;
+}
+
+.background-img{
+  width: 100%;
+  background-image: url("../../assets/DarkSkies.jpg")
+}
+
+.text-color{
+  color: white;
+}
+
+.mat-column-delete {
+  flex: 0 0 10% !important;
+  max-width: 20px !important;
+}
+
+.mat-row:hover {
+  background-color: #9FA8DA;
+  cursor: pointer;
+}
+
+.mat-display-1{
+  margin-bottom: 20px;
+}
+
+.padding-right {
+  padding-right: 8px;
+}

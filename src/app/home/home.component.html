@@ -1,0 +1,50 @@
+<mat-toolbar color="primary"><mat-icon class="padding-right">home</mat-icon>Customer Manager</mat-toolbar>
+<div class="background-img">
+<div class="main-content">
+<div class="mat-display-1 text-color">Customers list</div>
+<mat-form-field>
+    <mat-label class="text-color">Filter</mat-label>
+    <input matInput class="text-color" (keyup)="applyFilter($event.target.value)">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="addCustomer()">Add New Customer</button>            
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <ng-container matColumnDef="avatar" sticky>
+      <mat-header-cell *matHeaderCellDef>Avatar</mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="editCustomer(element.id)"> <img [src]="'http://127.0.0.1:8000'+element.avatar"/> </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="first_name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>First Name</mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="editCustomer(element.id)">{{element.first_name}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="last_name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="editCustomer(element.id)">{{element.last_name}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Address</mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="editCustomer(element.id)">{{element.address}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>City</mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="editCustomer(element.id)">{{element.city}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="state">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>State</mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="editCustomer(element.id)">{{element.state}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="order_total">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Total Order</mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="editCustomer(element.id)">{{element.order_total}}</mat-cell>
+  </ng-container>
+
+    <ng-container matColumnDef="delete" stickyEnd>
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <mat-icon (click)="deleteCustomer(element.id, element.first_name, element.last_name)">delete_outline</mat-icon>
+            </mat-cell>
+    </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>
+</div>
+</div>

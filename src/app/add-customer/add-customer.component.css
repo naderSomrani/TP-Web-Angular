@@ -1,0 +1,32 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    min-width: 500px;
+    width: 100%;
+  }
+
+.card-width {
+  max-width: 500px;
+}
+
+.main-content{
+  padding-top: 60px; 
+  padding-bottom: 60px
+}
+
+.background-img{
+  width: 100%;
+  background-image: url("../../assets/DarkSkies.jpg")
+}
+
+.form-item {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.right-padding {
+  padding-right: 8px; 
+}
