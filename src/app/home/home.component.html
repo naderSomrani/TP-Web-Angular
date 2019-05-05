@@ -2,11 +2,13 @@
 <div class="background-img">
 <div class="main-content">
 <div class="mat-display-1 text-color">Customers list</div>
+<div fxLayout="row" fxLayoutAlign="space-between start">
 <mat-form-field>
     <mat-label class="text-color">Filter</mat-label>
     <input matInput class="text-color" (keyup)="applyFilter($event.target.value)">
 </mat-form-field>
 <button mat-raised-button color="primary" (click)="addCustomer()">Add New Customer</button>            
+</div>
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
   <ng-container matColumnDef="avatar" sticky>
       <mat-header-cell *matHeaderCellDef>Avatar</mat-header-cell>

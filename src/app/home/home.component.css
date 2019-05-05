@@ -7,7 +7,8 @@ table {
   }
 
 img {
-    max-width: 30px;
+    padding: 4px;
+    max-width: 50px;
 }
 
 .main-content{
@@ -17,7 +18,7 @@ img {
 
 .background-img{
   width: 100%;
-  background-image: url("../../assets/DarkSkies.jpg")
+  background-image: url("../../assets/Portrait.jpg")
 }
 
 .text-color{
@@ -30,7 +31,7 @@ img {
 }
 
 .mat-row:hover {
-  background-color: #9FA8DA;
+  background-color: #78909C;
   cursor: pointer;
 }
 
